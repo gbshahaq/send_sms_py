@@ -1,1 +1,2 @@
 twilio==6.35.3
+phonenumbers==8.11.4
