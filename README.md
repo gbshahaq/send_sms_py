@@ -14,6 +14,7 @@ After cloning the repo:
 
 4. Install twilio - pip install -r requirements.txt
 
-5.  from command line to start
+5. Run python app.py from command line to start
+
 
 
