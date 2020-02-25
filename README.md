@@ -1,15 +1,19 @@
 Simple SMS sending with Twilio and Python
 
+After cloning the repo:
+
 
 1. set following environment variables in your system with appropriate values for your account:
     TWILIO_ACCOUNT_SID
     TWILIO_AUTH_TOKEN
     TWILIO_NUMBER
 
-2. copy the recip_list_copy file to recip_list and add the numbers you'd like to message
+2. copy the recip_list_copy file to recip_list.txt and add the numbers you'd like to message
 
 3. Edit the message in body.py to suit
 
-4. run app.py from your commandline
+4. Install twilio - pip install -r requirements.txt
+
+5.  from command line to start
 
 
