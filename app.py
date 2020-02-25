@@ -1,6 +1,6 @@
 from twilio.rest import Client
 from twilio.base.exceptions import TwilioRestException
-import phonenumbers
+from phonenumbers import parse, phonenumberutil
 
 from vars import TWILIO_ACCOUNT_SID, TWILIO_NUMBER, TWILIO_AUTH_TOKEN
 from vars import SIP_NUMBER
@@ -16,13 +16,18 @@ recipients = open("recip_list.txt","r")
 #loop through entries of phone numbers
 for line in recipients:
         try:
-            message = client.messages.create(
-                body=BODY + SIP_NUMBER, 
-                from_=TWILIO_NUMBER,
-                to=line
-                )
-        except TwilioRestException:
-            print("Twilio REST error with number " + line)
+            x = parse(line, None)
+            try:
+                message = client.messages.create(
+                    body=BODY + SIP_NUMBER, 
+                    from_=TWILIO_NUMBER,
+                    to=line
+                    )
+            except TwilioRestException:
+                print("Twilio REST error with number " + line)
+        except phonenumberutil.NumberParseException:
+            print(line + " does not look like a phone number in E.164 format")      
+
 
 recipients.close()
 
