@@ -4,16 +4,18 @@ from vars import SIP_NUMBER
 from body import BODY
 #from recipients import RECIPIENTS
 
+# establish Twilio client
 client = Client(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN)
 
+#open file for reading
 recipients = open("recip_list.txt","r")
 
+#loop through entries of phone numbers
 for l in recipients:
 #for i in RECIPIENTS:    
 
     message = client.messages.create(
         body=BODY + SIP_NUMBER, 
-#        body='Test message from xxx - please ignore!',
         from_=TWILIO_NUMBER,
         to=l
     )
