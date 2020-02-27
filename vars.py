@@ -1,4 +1,3 @@
-!#/usr/bin/python3
 # get env variables
 import os
 

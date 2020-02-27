@@ -1,10 +1,6 @@
-!#/usr/bin/python3
-
 from twilio.rest import Client
 from twilio.base.exceptions import TwilioRestException
 from phonenumbers import parse, phonenumberutil
-
-# local variables
 from vars import TWILIO_ACCOUNT_SID, TWILIO_NUMBER, TWILIO_AUTH_TOKEN
 from vars import SIP_NUMBER
 from body import BODY
