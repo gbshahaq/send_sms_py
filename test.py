@@ -1,3 +1,4 @@
+!#/usr/bin/python3
 from phonenumbers import parse, phonenumberutil
 
 mylist = open("recip_list_copy.txt","r")

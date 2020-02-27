@@ -1,3 +1,5 @@
+!#/usr/bin/python3
+
 from twilio.rest import Client
 from twilio.base.exceptions import TwilioRestException
 from phonenumbers import parse, phonenumberutil
