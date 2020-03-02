@@ -1,7 +1,7 @@
 from twilio.rest import Client
 from twilio.base.exceptions import TwilioRestException
 from phonenumbers import parse, phonenumberutil
-from vars import TWILIO_ACCOUNT_SID, TWILIO_NUMBER, TWILIO_AUTH_TOKEN
+from vars import TWILIO_ACCOUNT_SID, TWILIO_NUMBER, TWILIO_AUTH_TOKEN, TWILIO_MSG_SVC
 from vars import SIP_NUMBER
 from body import BODY
 
@@ -18,8 +18,9 @@ for line in recipients:
             x = parse(line, None)
             try:
                 message = client.messages.create(
-                    body=BODY + SIP_NUMBER, 
-                    from_=TWILIO_NUMBER,
+                    body=BODY, 
+#                    from_=TWILIO_NUMBER,
+                    messaging_service_sid=TWILIO_MSG_SVC,
                     to=line
                     )
             except TwilioRestException:
