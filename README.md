@@ -16,5 +16,6 @@ After cloning the repo:
 
 5. Run python app.py from command line to start
 
+[![Run on Repl.it](https://repl.it/badge/github/gbshahaq/send_sms_py)](https://repl.it/github/gbshahaq/send_sms_py)
 
 
