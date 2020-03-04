@@ -8,6 +8,7 @@ from body import BODY
 # establish Twilio client
 client = Client(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN)
 
+# likely a better way to do this - parameterize the used variables in the create call?
 # primary send - use messaging service
 def priSend(recip):
     message = client.messages.create(
