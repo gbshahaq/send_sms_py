@@ -1,7 +1,7 @@
 from twilio.rest import Client
 from twilio.base.exceptions import TwilioRestException
 from phonenumbers import parse, phonenumberutil
-from vars import TWILIO_ACCOUNT_SID, TWILIO_NUMBER, TWILIO_AUTH_TOKEN, TWILIO_MSG_SVC, TWILIO_NUMBER_US
+from vars import TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN, TWILIO_NUMBER, TWILIO_MSG_SVC, TWILIO_NUMBER_US
 from vars import SIP_NUMBER
 from body import BODY
 

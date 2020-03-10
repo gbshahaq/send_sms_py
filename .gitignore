@@ -3,3 +3,4 @@ __pycache__
 launch.json
 sipme.py
 .vscode
+test.py
